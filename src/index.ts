@@ -1,3 +1,3 @@
-import {result} from './part-one'
+import {result} from './part-two'
 
-document.getElementById("root").innerHTML = result;
+document.getElementById("root").innerHTML = '' + result;

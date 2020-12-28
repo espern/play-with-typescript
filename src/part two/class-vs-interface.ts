@@ -21,6 +21,3 @@ interface ShopItem {
     content: string
   }[]
 }
-
-let article: Article = undefined
-let shopItem: ShopItem = undefined

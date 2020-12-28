@@ -1,4 +1,4 @@
-import { Article } from "./types"
+import { Article } from "../part two/types"
 
 function addVat(price: number, vat: number = 0.2): number {
   return price * (1 + vat)

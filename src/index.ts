@@ -1,3 +1,6 @@
-import {result} from './part-two'
+import {result} from './part two/enums'
 
-document.getElementById("root").innerHTML = '' + result;
+let root = document.getElementById("root")
+if (root){
+  root.innerHTML = '' + result;
+}

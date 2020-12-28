@@ -5,6 +5,13 @@
   </head>
   <body>
     <h1>Play with TypeScript</h1>
-    <div id="root"></div>
+    <div id="root">
+      <form action="/search" method="POST">
+        <label for="search">Search the site!</label>
+        <input type="search" id="search">
+        <button type="submit">Go!</button>
+      </form>
+      <div id="output" hidden>
+    </div>
   </body>
 </html>

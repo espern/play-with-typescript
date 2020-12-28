@@ -1,4 +1,4 @@
-import {result} from './part two/enums'
+import {result} from './part three/search-function'
 
 let root = document.getElementById("root")
 if (root){

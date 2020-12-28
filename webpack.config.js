@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.ts',
@@ -17,11 +17,14 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js']
     },
     devtool: 'inline-source-map',
+    mode: 'development',
     devServer: {
         contentBase: './dist'
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin({
+            cleanAfterEveryBuildPatterns: ['dist']
+        }),
         new HtmlWebpackPlugin({
             template: 'src/templates/index.html'
         })

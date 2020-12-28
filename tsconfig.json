@@ -3,8 +3,11 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
-    "module":"ESNext",
-    "target":"ESNext",
+    "module":"commonjs",
+    "target":"es2018",
+    "lib": [
+      "DOM"
+    ],
     "jsx": "react",
     "allowJs": true,
     "strict": true

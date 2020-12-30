@@ -1,4 +1,4 @@
-import {returnValue} from './part three/function-overloading'
+import {returnValue} from './part three/generators'
 
 let res = document.getElementById('result')
 if (res){

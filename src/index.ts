@@ -1,4 +1,4 @@
-import {returnValue} from './part three/generators'
+import {returnValue} from './part four/modeling-data'
 
 let res = document.getElementById('result')
 if (res){

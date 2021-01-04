@@ -13,6 +13,12 @@ const subTitles: SubtitleURLs = {
   french: new URL('https://www.google.fr/?q=french')
 }
 
+type HD = Pick<
+VideoFormatURLs,
+'format1080p' | 'format720p'>
+
+type URLObject2 = Record<string, URL>
+
 declare function loadFormat(
   format: string
 ): void
@@ -57,6 +63,17 @@ async function loadFile<
     loaded: data.response === 200
   }
 }
+
+type Split = {
+  [P in keyof VideoFormatURLs]
+  : Record<P, VideoFormatURLs[P]>
+}[keyof VideoFormatURLs]
+
+type SplitGeneric<Obj> = {
+  [Prop in keyof Obj]: Record<Prop, Obj[Prop]>
+}[keyof Obj]
+
+type AvailableFormats = SplitGeneric<VideoFormatURLs>
 
 const result = async () => await loadFile(videos, 'format1080p')
 

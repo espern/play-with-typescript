@@ -1,4 +1,4 @@
-import {returnValue} from './part four/modeling-data'
+import {returnValue} from './part five/generics'
 
 let res = document.getElementById('result')
 if (res){
